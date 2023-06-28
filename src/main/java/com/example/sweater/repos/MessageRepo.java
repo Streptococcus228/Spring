@@ -1,2 +1,4 @@
-package com.example.sweater.repos;public interface MessageRepo {
+package com.example.sweater.repos;
+
+public interface MessageRepo {
 }
