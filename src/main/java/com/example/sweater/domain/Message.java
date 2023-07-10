@@ -1,15 +1,14 @@
 package com.example.sweater.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Message
-{
+public class Message {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(generator = "message _id_sequence")
     private Integer id;
 
     private String text;
@@ -23,8 +22,12 @@ public class Message
         this.tag = tag;
     }
 
-    public void setText(String text){
+    public void setText(String text) {
         this.text = text;
+    }
+
+    public String getText() {
+        return text;
     }
 
     public Integer getId() {
@@ -33,10 +36,6 @@ public class Message
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getText() {
-        return text;
     }
 
     public String getTag() {
