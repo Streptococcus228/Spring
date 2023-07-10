@@ -16,6 +16,11 @@ public class RegistrationController {
     @Autowired
     private UserRepo userRepo;
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
     @GetMapping("/registration")
     public String registration() {
         return "registration";
